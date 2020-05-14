@@ -1,10 +1,10 @@
 <template>
     <div class="Tmall">
-        <div class="Tmall-top">
-            <div  class="Tmall-top-more">
+        <div class="Tmall-top" >
+            <div  class="Tmall-top-more" @click="tag">
                 <div class="Tmall-top-mores" >
-                    <div @click="tag"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589366792151&di=44a7d895a147e7ba724f5f37a0f6aa77&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F36%2F48%2F19300001357258133412489354717.jpg" alt=""></div>
-                    <span>女装</span>
+                    <div><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589366792151&di=44a7d895a147e7ba724f5f37a0f6aa77&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F36%2F48%2F19300001357258133412489354717.jpg" alt=""></div>
+                    <span >女装</span>
                 </div>
             </div>
             <div  class="Tmall-top-more">
@@ -44,11 +44,11 @@
                 </div>
             </div>
         </div>
-        <div class="Tmall-bottom">
+        <div class="Tmall-bottom"  >
             <div class="Tmall-bottom-title"><span>优质推荐</span></div>
-            <div class="Tmall-bottom-down">
-                 <el-row>
-                    <el-col :span="8" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 2 : 0">
+            <div class="Tmall-bottom-down" >
+                 <el-row >
+                    <el-col @click.native="detailed" :span="8" v-for="(o, index) in 3" :key="o" :offset="index > 0 ? 2 : 0" @click="detailed">
                         <el-card :body-style="{ padding: '0px' }">
                         <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
                         <div style="padding: 8px;">
@@ -84,7 +84,10 @@ export default {
     },
     methods:{
         tag(){
-            console.log(123)
+            this.$router.push('/movie/catalog')
+        },
+        detailed(){
+            this.$router.push('/movie/detailed')
         }
     }
     
@@ -94,6 +97,7 @@ export default {
 <style scoped lang="scss">
     .Tmall-top{
         width:100%;
+        overflow: hidden;
         .Tmall-top-more{
             width: 20%;
             height: 100px;

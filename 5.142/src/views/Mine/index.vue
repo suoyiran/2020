@@ -33,7 +33,7 @@
                 <div class="maindiscount-down2">油票(元)</div>
             </div>
         </div>
-        <div class="maindiscount">
+        <div class="maindiscountimg">
             <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589431577884&di=3933d7474716f7170940d9c65677ad23&imgtype=0&src=http%3A%2F%2Fimg.ewebweb.com%2Fuploads%2F20191224%2F22%2F1577197932-lIdZgizKWO.jpg" alt="">
         </div>
         <div class="gasoline-moss">
@@ -145,6 +145,13 @@ export default {
                 color: rgb(146, 140, 140);
             }
         }
+        
+    }
+    .maindiscountimg{
+        width:94%;
+        height:100px;
+        margin:2% 3% 2% 3%;
+        border-radius: 5%;
         img{
             width: 100%;
             height: 100%;
