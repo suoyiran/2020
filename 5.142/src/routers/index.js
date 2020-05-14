@@ -11,6 +11,12 @@ export default new Router({
   /* mode: 'history', */
   /*  base: process.env.BASE_URL,  */
   routes: [
+    {path : '/movie/catalog',
+    name:'catalog',
+    component : () => import('@/views/Movie/Catalog')},
+    {path : '/movie/detailed',
+    name:'detailed',
+    component : () => import('@/views/Movie/Detailed')},
     movieRouter,
     cinemaRouter,
     mineRouter,

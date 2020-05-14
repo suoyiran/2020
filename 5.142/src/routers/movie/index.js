@@ -2,14 +2,6 @@ export default {
     path : '/movie',
     name:'movie',
     component : () => import('@/views/Movie'),
-    children : [
-        {
-            path : 'catalog',
-            name:'catalog',
-            component : () => import('@/views/Movie/Catalog')
-        },
-       
-    ]
     /* children : [
         {
             path : 'city',
