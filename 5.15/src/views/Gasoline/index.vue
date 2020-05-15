@@ -4,7 +4,7 @@
             <div class="gasoline-gift">
                 <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589296721490&di=7098c3456131ef75992ab7e3c96c641b&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F16%2F05%2F28%2F1657495a2b287f6.jpg" alt="">
             </div>
-            <div class="gasoline-scan" @click="scan">
+            <div class="gasoline-scan" >
                 <div class="iconfont icon-saoyisao"></div>
                 <div class="gasoline-scan-csan">扫一扫</div>
             </div>
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="gasoline-oil">
-                    <el-button type="danger" class="gasoline-oil-now">立即加油</el-button>
+                    <el-button type="danger" class="gasoline-oil-now" @click="jumoli">立即加油</el-button>
                     <div class="gasoline-oil-down"><span>认证商用车再降￥0.20</span><i>去认证</i></div>
                 </div>
             </div > 
@@ -75,8 +75,8 @@ export default {
         }
     },
     methods: {
-        scan(){
-           this.$router.push('/scan')
+        jumoli(){
+           this.$router.push('/oline')
         }
     },
 }
